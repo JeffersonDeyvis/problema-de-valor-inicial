@@ -1,4 +1,5 @@
 # This code calculates the ODE solution.
+from re import T
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -27,8 +28,8 @@ def rk4(f, h, t0, y0, tf):
     return (T, y)
 
 
-x, y = rk4(f, 0.01, 0, 4, 20)
-plt.plot(x, y)
+t, y = rk4(f, 0.01, 0, 4, 20)
+plt.plot(t, y)
 plt.savefig('teste.png')
 
 """
